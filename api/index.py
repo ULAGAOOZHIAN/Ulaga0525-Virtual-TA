@@ -126,3 +126,8 @@ def ask_question(payload: QuestionIn):
             links.append({"url": url, "text": chunk['text'][:80]})
 
     return {"answer": answer, "links": links}
+
+
+@app.get("/")
+def health():
+    return {"message": "Application is Healthy!!"}
