@@ -1,5 +1,6 @@
 services:
-  - name: app
+  - type: web             # ✅ Required field
+    name: app
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn index:app --host 0.0.0.0 --port 80
